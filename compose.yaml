@@ -1,0 +1,32 @@
+services:
+
+  database:
+    image: mariadb:12.2
+    container_name: symfony_db
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: root # Change this to a secure password in production
+      MARIADB_DATABASE: symfony_db
+      MARIADB_USER: symfony_user # Change this to your desired database user
+      MARIADB_PASSWORD: password123 # Change this to a secure password in production
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: symfony_pma
+    restart: always
+    depends_on:
+      - database
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: root
+    ports:
+      - "8080:80"
+
+volumes:
+  db_data:
