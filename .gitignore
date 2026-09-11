@@ -1,0 +1,69 @@
+
+###> symfony/framework-bundle ###
+/config/secrets/prod/prod.decrypt.private.php
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+/.phpunit.cache/
+###< phpunit/phpunit ###
+
+###> symfony/asset-mapper ###
+/public/assets/
+/assets/vendor/
+###< symfony/asset-mapper ###
+
+##############################
+# Environment
+##############################
+.env
+.env.local
+.env.*.local
+.env.dev
+.env.test
+
+##############################
+# Logs & cache
+##############################
+*.log
+*.cache
+*.tmp
+/storage/logs/
+/storage/framework/cache/
+/storage/framework/sessions/
+/storage/framework/views/
+/logs
+
+##############################
+# node
+##############################
+/node_modules
+
+##############################
+# IDE
+##############################
+.idea/
+*.iml
+
+##############################
+# OS
+##############################
+.DS_Store
+Thumbs.db
+desktop.ini
+
+##############################
+# PHPUnit
+##############################
+.phpunit.result.cache
+coverage/
+
+##############################
+# Vite / Mix
+##############################
+/public/build
+/public/mix-manifest.json
+
